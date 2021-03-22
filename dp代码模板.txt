@@ -1,0 +1,11 @@
+```python
+N = len(para)
+# 也许要预处理
+dp = [[0]*N for _ in range(N)]    # 也许是N+1
+# 初始化dp
+
+for i in range(1, N+1):
+    for j in range(i):
+        状态转移
+return dp[-1][-1]
+```

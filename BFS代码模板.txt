@@ -1,0 +1,18 @@
+```python
+N = len(para)
+
+seen = {start}
+queue = [(start, 0)]
+
+while queue:
+    now, time = queue.pop(0)
+    if 终止条件:
+        return time
+    pack = []
+    for i in (下一跳能遍历的状态):
+        if 剪枝掉某些不合法状态 and i not in seen:
+            pack.append((i, time + 1))
+    seen.update(pack)
+    queue += pack
+return -1
+```
