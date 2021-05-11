@@ -1,0 +1,16 @@
+syntax = "proto3";
+package protobufs;
+option optimize_for = LITE_RUNTIME;
+
+message remoteAddPara
+{
+    int64 para1 = 1;
+    int64 para2 = 2;
+}
+
+message remoteAddReturn
+{
+    int64 ans = 1;
+}
+
+// protoc -I ../../scripts/ --cpp_out=../../code/include/ ../../scripts/protobufs.proto
